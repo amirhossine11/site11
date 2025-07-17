@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فروشگاه پسته‌فروش</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">پسته‌فروش</div>
+      <button id="theme-toggle">🌓</button>
+      <button id="menu-toggle" class="hamburger">☰</button>
+      <nav id="main-nav" class="nav hidden">
+        <ul>
+          <li><a href="#products">محصولات</a></li>
+          <li><a href="#categories">دسته‌بندی</a></li>
+          <li><a href="#about">درباره ما</a></li>
+          <li><a href="#help">راهنما</a></li>
+          <li><a href="#cart-panel">سبد خرید 🛒 <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>به فروشگاه تخصصی پسته خوش آمدید</h1>
+    <p>با کیفیت‌ترین پسته‌های ایرانی با بهترین قیمت</p>
+  </section>
+
+  <section class="filter container">
+    <label>فیلتر قیمت:</label>
+    <input type="range" id="price-filter" min="100000" max="300000" step="10000">
+    <span id="price-value">300000</span> تومان
+  </section>
+
+  <section id="categories" class="container">
+    <h2>دسته‌بندی پسته‌ها</h2>
+    <ul class="categories">
+      <li data-category="اکبری">اکبری</li>
+      <li data-category="احمدآقایی">احمدآقایی</li>
+      <li data-category="فندقی">فندقی</li>
+      <li data-category="کله‌قوچی">کله‌قوچی</li>
+      <li data-category="شور">شور</li>
+    </ul>
+  </section>
+
+  <main id="products" class="products container">
+    <h2>محصولات ما</h2>
+    <div class="product-list"></div>
+  </main>
+
+  <section id="about" class="about container">
+    <h2>درباره ما</h2>
+    <p>ما یک تیم متخصص در زمینه فروش و صادرات پسته‌های ممتاز ایرانی هستیم. هدف ما ارائه بهترین کیفیت با مناسب‌ترین قیمت است.</p>
+  </section>
+
+  <section id="help" class="help container">
+    <h2>راهنما</h2>
+    <ul>
+      <li>برای سفارش، محصول را به سبد خرید اضافه کنید.</li>
+      <li>قیمت‌ها به تومان هستند و قابل فیلترند.</li>
+      <li>شما می‌توانید دسته‌بندی مورد علاقه خود را انتخاب کنید.</li>
+    </ul>
+  </section>
+
+  <aside id="cart-panel" class="cart-panel hidden">
+    <h3>🛒 سبد خرید شما</h3>
+    <div id="cart-items"></div>
+    <div class="cart-summary">
+      <p>مجموع: <span id="cart-total">۰</span> تومان</p>
+      <button id="checkout">تسویه حساب</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© تمامی حقوق متعلق به پسته‌فروش می‌باشد.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
